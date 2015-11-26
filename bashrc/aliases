@@ -7,28 +7,27 @@ alias .....="cd ../../../.."
 alias ~="cd ~" # `cd` is probably faster to type though
 alias -- -="cd -"
 
-alias gbi='git browse --issues'
-
+alias tmux="TERM=screen-256color-bce tmux"
 alias pyserver='python -m SimpleHTTPServer'
 
-alias start_redis='redis-server /usr/local/etc/redis.conf'
-alias startmemcache='memcached -d'
-
-
+# Ember and Rails
 alias nombomb='npm cache clear && bower cache clean && rm -rf node_modules bower_components dist tmp && npm install && bower install'
 alias nombom=nombomb
-
 alias jbomb='git pull origin develop && bundle && ber db:migrate && rails s'
+alias start_redis='redis-server /usr/local/etc/redis.conf'
+alias startmemcache='memcached -d'
+alias frr='foreman run rake '
 
-alias grhh='git reset --hard HEAD'
-
+# GIT
 alias gs='git status '
 alias co='git checkout '
 alias gpod='git push origin develop'
 alias gpulld='git pull origin develop'
+alias grhh='git reset --hard HEAD'
+alias gbi='git browse --issues'
+
+# Bundler
+alias b="bundle"
 alias ber='bundle exec rake '
 alias be='bundle exec '
 alias rs='bundle exec rails s '
-alias frr='foreman run rake '
-
-alias tmux="TERM=screen-256color-bce tmux"

@@ -19,4 +19,5 @@ Step 2: Things to explore
 
 ## References
 
-// TODO: Shoulders of giants and all...
+https://github.com/mathiasbynens/dotfiles
+https://github.com/thoughtbot/dotfiles
