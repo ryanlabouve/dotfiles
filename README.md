@@ -6,6 +6,7 @@ Step 1: Current Environment
 * VIM
 * Ack
 * Bash
+* TMUX
 
 Step 2: Things to explore
 * ZSH
