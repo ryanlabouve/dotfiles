@@ -12,3 +12,6 @@ eval "$(hub alias -s)"
 source ~/.git-completion.bash
 # https://raw.githubusercontent.com/github/hub/master/etc/hub.bash_completion.sh
 source ~/.hub.bash_completion.sh
+
+export NVM_DIR="/Users/luckyrye/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
