@@ -1,5 +1,11 @@
 #!/bin/bash
 
+echo "Updating all the things"
+./update.sh
+
+echo "Setting OSX Defaults"
+./osx.sh
+
 # Create vim-tmp for swap files
 mkdir -p ~/.vim-tmp
 
