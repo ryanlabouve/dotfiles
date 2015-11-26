@@ -15,8 +15,8 @@ ln -nfs $REPO_DIR/vimrc ~/.vimrc
 echo "Setting up symlinks for: ackrc"
 ln -nfs $REPO_DIR/ackrc ~/.ackrc
 
-
-# ln -nfs $REPO_DIR/tmux.conf ~/.tmux.conf
+echo "Setting up symlinks for: tmux.conf"
+ln -nfs $REPO_DIR/tmux.conf ~/.tmux.conf
 
 # ln -fs $REPO_DIR/vim ~/.vim
 
