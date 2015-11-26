@@ -7,7 +7,10 @@ mkdir -p ~/.vim-tmp
 REPO_DIR=`pwd`
 echo "Setting up symlinks for: vimrc"
 ln -nfs $REPO_DIR/vimrc ~/.vimrc
-# ln -nfs $REPO_DIR/ackrc ~/.ackrc
+
+echo "Setting up symlinks for: ackrc"
+ln -nfs $REPO_DIR/ackrc ~/.ackrc
+
 # ln -nfs $REPO_DIR/bash_profile ~/.bash_profile
 # ln -nfs $REPO_DIR/tmux.conf ~/.tmux.conf
 
