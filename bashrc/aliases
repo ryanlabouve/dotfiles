@@ -1,0 +1,34 @@
+# https://github.com/mathiasbynens/dotfiles/blob/master/.aliases
+# Easier navigation: .., ..., ...., ....., ~ and -
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+alias ~="cd ~" # `cd` is probably faster to type though
+alias -- -="cd -"
+
+alias gbi='git browse --issues'
+
+alias pyserver='python -m SimpleHTTPServer'
+
+alias start_redis='redis-server /usr/local/etc/redis.conf'
+alias startmemcache='memcached -d'
+
+
+alias nombomb='npm cache clear && bower cache clean && rm -rf node_modules bower_components dist tmp && npm install && bower install'
+alias nombom=nombomb
+
+alias jbomb='git pull origin develop && bundle && ber db:migrate && rails s'
+
+alias grhh='git reset --hard HEAD'
+
+alias gs='git status '
+alias co='git checkout '
+alias gpod='git push origin develop'
+alias gpulld='git pull origin develop'
+alias ber='bundle exec rake '
+alias be='bundle exec '
+alias rs='bundle exec rails s '
+alias frr='foreman run rake '
+
+alias tmux="TERM=screen-256color-bce tmux"
