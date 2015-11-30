@@ -10,6 +10,8 @@ alias -- -="cd -"
 alias tmux="TERM=screen-256color-bce tmux"
 alias pyserver='python -m SimpleHTTPServer'
 
+alias dt="cd ~/Desktop"
+
 # Ember and Rails
 alias nombomb='npm cache clear && bower cache clean && rm -rf node_modules bower_components dist tmp && npm install && bower install'
 alias nombom=nombomb

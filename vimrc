@@ -52,6 +52,7 @@ endfunc
 " UI STUFF
 "
 set number              " show line numbers
+set relativenumber
 set showcmd             " show command in bottom bar
 "set cursorline          " highlight current line
 set showmatch           " highlight matching [{()}]
@@ -87,6 +88,7 @@ Plugin 'git://git.wincent.com/command-t.git'
 Plugin 'pangloss/vim-javascript'
 Plugin 'tpope/vim-surround'
 Plugin 'tomtom/tcomment_vim'
+Plugin 'mattn/emmet-vim'
 
 Plugin 'dsawardekar/ember.vim'
 Bundle 'dsawardekar/portkey'

@@ -1,5 +1,5 @@
 # Imports for my bashrc
-for file in ~/dotfiles/bashrc/{bash_prompt,aliases,functions}; do
+for file in ~/dotfiles/bashrc/{bash_prompt,aliases,functions,exports}; do
 	[ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 unset file;
