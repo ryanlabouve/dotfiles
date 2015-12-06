@@ -81,6 +81,7 @@ Plugin 'elixir-lang/vim-elixir'
 
 " For browsing the files
 Bundle 'scrooloose/nerdtree'
+let NERDTreeShowHidden=1
 
 " Git plugin not hosted on GitHub
 Plugin 'git://git.wincent.com/command-t.git'
