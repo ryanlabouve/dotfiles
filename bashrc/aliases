@@ -7,6 +7,7 @@ alias .....="cd ../../../.."
 alias ~="cd ~" # `cd` is probably faster to type though
 alias -- -="cd -"
 
+alias e="ember"
 alias tmux="TERM=screen-256color-bce tmux"
 alias pyserver='python -m SimpleHTTPServer'
 
