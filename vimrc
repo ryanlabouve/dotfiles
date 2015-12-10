@@ -24,6 +24,9 @@ set expandtab
 set autoindent    " turns it on
 set smartindent   " does the right thing (mostly) in
 " http://dougblack.io/words/a-good-vimrc.html
+"
+set ignorecase
+set smartcase
 
 let mapleader=","
 
