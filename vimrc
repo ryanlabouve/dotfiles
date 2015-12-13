@@ -1,6 +1,19 @@
-set nocompatible              " be iMproved, required
+" This will be passed down to my children
+" if you are reading this in the future (probably year 2214)
+" and the humans are still winning against the robots, hopefully
+" this helps.
+"
+" <3 Ryan LaBouve, 2015
+"
+
+" ~*~*~*~*~*  General Config ~*~*~*~*~
+"
+colorscheme colorsbox-stnight
+
 filetype off                  " required
 syntax enable                 " enable syntax processing
+
+set nocompatible              " be iMproved, required
 set expandtab       " tabs are spaces
 set history=50
 set ruler         " show the cursor position all the time
@@ -11,12 +24,9 @@ set backspace=2   " Backspace deletes like most programs in insert mode
 set nobackup
 set nowritebackup
 set noswapfile    " http://robots.thoughtbot.com/post/18739402579/global-gitignore#comment-458413287
-
 " http://stackoverflow.com/questions/1675688/make-vim-show-all-white-spaces-as-a-character
 set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
 set list
-
-" Softtabs, 2 spaces
 set tabstop=2
 set shiftwidth=2
 set shiftround
@@ -27,30 +37,6 @@ set smartindent   " does the right thing (mostly) in
 "
 set ignorecase
 set smartcase
-
-let mapleader=","
-
-" Get out of here colon
-" You wastin mah time
-" http://vim.wikia.com/wiki/Map_semicolon_to_colon
-nmap ; :
-
-" NERDTree
-map <C-n> :NERDTreeToggle<CR>
-let NERDTreeHighlightCursorline=1
-let NERDTreeIgnore = ['tmp', '.yardoc', 'pkg']
-
-let mapleader=","
-
-function! NumberToggle()
-  if(&relativenumber == 1)
-    set number
-  else
-    set relativenumber
-  endif
-endfunc
-
-" nnoremap <C-n> :call NumberToggle()<cr>
 
 " UI STUFF
 "
@@ -65,6 +51,18 @@ set showmatch           " highlight matching [{()}]
 set incsearch           " search as characters are entered
 set hlsearch            " highlight matches
 
+" My leader is `,` This is quite important
+let mapleader=","
+
+" Get out of here colon
+" You wastin mah time
+" http://vim.wikia.com/wiki/Map_semicolon_to_colon
+nmap ; :
+
+
+
+" ~*~*~*~*~*  Vundle Stuff ~*~*~*~*~
+"
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -84,33 +82,20 @@ Plugin 'elixir-lang/vim-elixir'
 
 " For browsing the files
 Bundle 'scrooloose/nerdtree'
-let NERDTreeShowHidden=1
-
-" Git plugin not hosted on GitHub
-Plugin 'git://git.wincent.com/command-t.git'
-
 Plugin 'pangloss/vim-javascript'
 Plugin 'tpope/vim-surround'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'mattn/emmet-vim'
-
 Plugin 'dsawardekar/ember.vim'
 Bundle 'dsawardekar/portkey'
 Plugin 'mustache/vim-mustache-handlebars'
-
 Plugin 'mileszs/ack.vim'
-
 Plugin 'elzr/vim-json'
-Plugin 'editorconfig/editorconfig-vim'
-
+Plugin 'editorconfig/editorconfig-vim'        " respect projects rules
 Plugin 'mxw/vim-jsx'
-let g:jsx_ext_required = 0 " Allow JSX in normal JS files
-
 Plugin 'bling/vim-airline'
-let g:airline#extensions#tabline#enabled = 1
+Plugin 'chrismccord/bclose.vim'               " For closing buffers
 
-set background=dark
-colorscheme colorsbox-stnight
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -118,17 +103,28 @@ filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
 "
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
 "
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
+" A quicker way to reload vimrc
+noremap <Leader>r :so %
+
+
+" NERDTree
+map <C-n> :NERDTreeToggle<CR>
+let NERDTreeHighlightCursorline=1
+let NERDTreeIgnore = ['tmp', '.yardoc', 'pkg']
+let NERDTreeShowHidden=1
+
+" Git plugin not hosted on GitHub
+let g:jsx_ext_required = 0 " Allow JSX in normal JS files
+
+" Get dat airline bar going
+let g:airline#extensions#tabline#enabled = 1
 
 let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist|tmp|bower_components)|(\.(swp|ico|git|svn))$'
 
+
+" ## Splitting Stuff
+"
 " Open new split panes to right and bottom, which feels more natural
 set splitbelow
 set splitright
