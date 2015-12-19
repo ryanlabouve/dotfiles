@@ -15,10 +15,23 @@ syntax enable                 " enable syntax processing
 
 set nocompatible              " be iMproved, required
 set expandtab       " tabs are spaces
-set history=50
+set history=1000                "Store lots of :cmdline history
+set visualbell                  "No sounds
 set ruler         " show the cursor position all the time
 set showcmd       " display incomplete commands
-set incsearch     " do incremental searching
+
+" https://amix.dk/vim/vimrc.html
+" Treat long lines as break lines (useful when moving around in them)
+map j gj
+map k gk
+
+" ## Searching
+set incsearch           " search as characters are entered
+set hlsearch            " highlight matches
+set ignorecase
+set smartcase
+
+
 set laststatus=2  " Always display the status line
 set backspace=2   " Backspace deletes like most programs in insert mode
 set nobackup
@@ -35,21 +48,14 @@ set autoindent    " turns it on
 set smartindent   " does the right thing (mostly) in
 " http://dougblack.io/words/a-good-vimrc.html
 "
-set ignorecase
-set smartcase
 
 " UI STUFF
-"
 set number              " show line numbers
 set relativenumber
 set showcmd             " show command in bottom bar
-"set cursorline          " highlight current line
+set cursorline          " highlight current line
 set showmatch           " highlight matching [{()}]
 
-" SEARCHING STUFF
-"
-set incsearch           " search as characters are entered
-set hlsearch            " highlight matches
 
 " My leader is `,` This is quite important
 let mapleader=","
@@ -79,8 +85,6 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'elixir-lang/vim-elixir'
-
-" For browsing the files
 Bundle 'scrooloose/nerdtree'
 Plugin 'pangloss/vim-javascript'
 Plugin 'tpope/vim-surround'
@@ -105,8 +109,21 @@ filetype plugin indent on    " required
 "
 "
 " A quicker way to reload vimrc
-noremap <Leader>r :so %
+noremap <Leader>r :so ~/.vimrc<cr>
 
+" ## Buffer Stuff, (close, next, prev)
+"   - Mimics command+w
+map <leader>w :Bclose<cr>
+map <leader>n :bn<cr>
+"  - p makes more sense, n is convinient when going back and forth
+map <leader>p :bp<cr>
+map <leader>n :bp<cr>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Spell checking
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Pressing ,ss will toggle and untoggle spell checking
+map <leader>ss :setlocal spell!<cr>
 
 " NERDTree
 map <C-n> :NERDTreeToggle<CR>
@@ -114,7 +131,6 @@ let NERDTreeHighlightCursorline=1
 let NERDTreeIgnore = ['tmp', '.yardoc', 'pkg']
 let NERDTreeShowHidden=1
 
-" Git plugin not hosted on GitHub
 let g:jsx_ext_required = 0 " Allow JSX in normal JS files
 
 " Get dat airline bar going
@@ -128,6 +144,14 @@ let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist|tmp|bower_component
 " Open new split panes to right and bottom, which feels more natural
 set splitbelow
 set splitright
+
+" Resizing
+" -- up and down
+nnoremap <silent> <Leader>+ :exe "resize +10"<CR>
+nnoremap <silent> <Leader>- :exe "resize -10"<CR>
+" -- left and right
+nnoremap <Leader>> :exe "vertical resize +10"<CR>
+nnoremap <Leader>< :vertical resize -10<CR>
 
 " Quicker window movement
 nnoremap <C-j> <C-w>j
@@ -144,6 +168,14 @@ nnoremap <Up> :echoe "Use k"<CR>
 nnoremap <Down> :echoe "Use j"<CR>
 
 filetype plugin indent on
+
+" https://github.com/skwp/dotfiles/blob/master/vimrc
+" ================ Scrolling ========================
+
+set scrolloff=8         "Start scrolling when we're 8 lines away from margins
+set sidescrolloff=15
+set sidescroll=1
+
 
 augroup vimrcEx
   autocmd!
