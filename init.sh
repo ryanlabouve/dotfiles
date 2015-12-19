@@ -24,6 +24,9 @@ ln -nfs $REPO_DIR/ackrc ~/.ackrc
 echo "Setting up symlinks for: tmux.conf"
 ln -nfs $REPO_DIR/tmux.conf ~/.tmux.conf
 
+echo "Setting up inputrc for vi bindings by default"
+ln -nfs $REPO_DIR/inputrc ~/.inputrc
+
 # ln -fs $REPO_DIR/vim ~/.vim
 
 # Git Stuff
