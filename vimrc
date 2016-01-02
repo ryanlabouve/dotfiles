@@ -56,6 +56,8 @@ set showcmd             " show command in bottom bar
 set cursorline          " highlight current line
 set showmatch           " highlight matching [{()}]
 
+set autoread
+
 
 " My leader is `,` This is quite important
 let mapleader=","
@@ -100,6 +102,7 @@ Plugin 'mxw/vim-jsx'
 Plugin 'bling/vim-airline'
 Plugin 'chrismccord/bclose.vim'               " For closing buffers
 
+Plugin 'tmux-plugins/vim-tmux-focus-events'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
