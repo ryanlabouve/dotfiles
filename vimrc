@@ -8,7 +8,8 @@
 
 " ~*~*~*~*~*  General Config ~*~*~*~*~
 "
-colorscheme colorsbox-stnight
+" colorscheme colorsbox-stnight
+colo badwolf
 
 filetype off                  " required
 syntax enable                 " enable syntax processing
@@ -133,6 +134,8 @@ map <C-n> :NERDTreeToggle<CR>
 let NERDTreeHighlightCursorline=1
 let NERDTreeIgnore = ['tmp', '.yardoc', 'pkg']
 let NERDTreeShowHidden=1
+" How can I close vim if the only window left open is a NERDTree?
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 let g:jsx_ext_required = 0 " Allow JSX in normal JS files
 
