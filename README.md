@@ -58,3 +58,9 @@ https://github.com/mathiasbynens/dotfiles
 https://github.com/thoughtbot/dotfiles
 
 https://github.com/webpro/awesome-dotfiles
+
+## Colors
+
+Make sure to set a defualt iterm2 color theme as well
+https://github.com/chriskempson/base16-iterm2.git
+

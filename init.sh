@@ -27,8 +27,16 @@ ln -nfs $REPO_DIR/tmux.conf ~/.tmux.conf
 echo "Setting up inputrc for vi bindings by default"
 ln -nfs $REPO_DIR/inputrc ~/.inputrc
 
+cp vim/colors/* ~/.vim/colors/
 # ln -fs $REPO_DIR/vim ~/.vim
+
+# Hack to get colors working right
+git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell
+vim +PluginInstall +qall
+cp ~/.vim/bundle/base-16/colors/*.vim ~/.vim/colors/
 
 # Git Stuff
 # http://news.ycombinator.com/item?id=4130494
 git config --global color.ui "auto"
+
+
