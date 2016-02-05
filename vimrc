@@ -110,6 +110,8 @@ Plugin 'chrismccord/bclose.vim'               " For closing buffers
 
 Plugin 'tmux-plugins/vim-tmux-focus-events'
 
+Plugin 'wesQ3/vim-windowswap'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -122,7 +124,7 @@ noremap <Leader>r :so ~/.vimrc<cr>
 
 " ## Buffer Stuff, (close, next, prev)
 "   - Mimics command+w
-map <leader>w :Bclose<cr>
+map <leader>W :Bclose<cr>
 map <leader>n :bn<cr>
 "  - p makes more sense, n is convinient when going back and forth
 map <leader>p :bp<cr>
