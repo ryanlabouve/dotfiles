@@ -6,6 +6,10 @@ unset file;
 
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
+if [ -f ~/dotfiles/vendor/hub.bash_completion.sh ]; then
+  . ~/dotfiles/vendor/hub.bash_completion.sh
+fi
+
 eval "$(hub alias -s)"
 
 # https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash

@@ -29,6 +29,8 @@ alias gpulld='git pull origin develop'
 alias grhh='git reset --hard HEAD'
 alias gbi='git browse --issues'
 
+git config --global --add alias.lol "log --graph --decorate --pretty=oneline --abbrev-commit --all"
+
 # Bundler
 alias b="bundle"
 alias ber='bundle exec rake '
