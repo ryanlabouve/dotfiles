@@ -132,6 +132,9 @@ map <leader>n :bn<cr>
 map <leader>p :bp<cr>
 map <leader>n :bp<cr>
 
+" show name of current file
+map <leader>@ :echo @%<cr>
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Spell checking
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
