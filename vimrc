@@ -87,6 +87,8 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'chriskempson/base16-vim'
 let base16colorspace=256  " Access colors present in 256 colorspace
 colorscheme base16-default
+" autocmd ColorScheme * highlight NonText guifg=#bada55
+" autocmd ColorScheme * highlight SpecialKey guifg=#bada44
 set background=dark
 
 " plugin on GitHub repo
@@ -246,3 +248,4 @@ augroup END
 
 " Hat Tips:
 " - https://github.com/thoughtbot/dotfiles/blob/master/vimrc
+
