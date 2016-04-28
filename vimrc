@@ -93,6 +93,8 @@ set background=dark
 
 " plugin on GitHub repo
 Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-rails'
+Plugin 'tpope/vim-bundlerrails'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'elixir-lang/vim-elixir'
 Bundle 'scrooloose/nerdtree'
@@ -172,7 +174,8 @@ call NERDTreeHighlightFile('php', 'Magenta', 'none', '#ff00ff', '#151515')
 let g:jsx_ext_required = 0 " Allow JSX in normal JS files
 
 " Purge cache every control p time
-nnoremap <silent> <c-p> :ClearCtrlPCache<cr>\|:CtrlP<cr>
+" nnoremap <silent> <c-p> :ClearCtrlPCache<cr>\|:CtrlP<cr>
+nnoremap <Leader> 5 :ClearCtrlPCache<cr>\|:CtrlP<cr>
 
 " Get dat airline bar going
 let g:airline#extensions#tabline#enabled = 1
