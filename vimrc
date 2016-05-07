@@ -94,7 +94,7 @@ set background=dark
 " plugin on GitHub repo
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-rails'
-Plugin 'tpope/vim-bundlerrails'
+Plugin 'tpope/vim-bundler'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'elixir-lang/vim-elixir'
 Bundle 'scrooloose/nerdtree'
@@ -105,7 +105,7 @@ Plugin 'mattn/emmet-vim'
 Plugin 'dsawardekar/ember.vim'
 Bundle 'dsawardekar/portkey'
 Plugin 'mustache/vim-mustache-handlebars'
-Plugin 'mileszs/ack.vim'
+Plugin 'rking/ag.vim'
 Plugin 'elzr/vim-json'
 Plugin 'editorconfig/editorconfig-vim'        " respect projects rules
 Plugin 'mxw/vim-jsx'
@@ -203,7 +203,7 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
 
-nnoremap <C-f> :Ack   . <Left><Left><Left><Left>
+nnoremap <C-f> :Ag   . <Left><Left><Left><Left>
 
 " Get off my lawn
 nnoremap <Left> :echoe "Use h"<CR>
