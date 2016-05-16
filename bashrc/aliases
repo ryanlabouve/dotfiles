@@ -30,9 +30,13 @@ alias grhh='git reset --hard HEAD'
 alias gbi='git browse --issues'
 
 git config --global --add alias.lol "log --graph --decorate --pretty=oneline --abbrev-commit --all"
+git config --global --add alias.co "checkout"
+git config --global --add alias.cob "checkout -b"
 
 # Bundler
 alias b="bundle"
 alias ber='bundle exec rake '
 alias be='bundle exec '
 alias rs='bundle exec rails s '
+
+alias railsf='ber db:drop && ber db:create && ber db:structure:load && ber:db:seed'
