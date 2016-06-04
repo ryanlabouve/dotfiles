@@ -13,6 +13,8 @@
 filetype off                  " required
 syntax enable                 " enable syntax processing
 
+set numberwidth=5
+
 set nocompatible              " be iMproved, required
 set expandtab       " tabs are spaces
 set history=1000                "Store lots of :cmdline history
@@ -22,8 +24,8 @@ set showcmd       " display incomplete commands
 
 " https://amix.dk/vim/vimrc.html
 " Treat long lines as break lines (useful when moving around in them)
-map j gj
-map k gk
+noremap j gj
+noremap k gk
 
 " ## Searching
 set incsearch           " search as characters are entered
@@ -65,7 +67,7 @@ let mapleader=","
 " Get out of here colon
 " You wastin mah time
 " http://vim.wikia.com/wiki/Map_semicolon_to_colon
-nmap ; :
+nnoremap ; :
 
 " Folding
 "
@@ -113,7 +115,14 @@ colorscheme base16-default
 " autocmd ColorScheme * highlight SpecialKey guifg=#bada44
 set background=dark
 
+Plugin 'fatih/vim-go'
 " plugin on GitHub repo
+" Plugin 'terryma/vim-multiple-cursors'
+" let g:multi_cursor_next_key='<C-x>'
+" let g:multi_cursor_prev_key='<C-X>'
+" let g:multi_cursor_skip_key='<C-s>'
+" let g:multi_cursor_quit_key='<Esc>'
+
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-bundler'
@@ -150,11 +159,11 @@ noremap <Leader>r :so ~/.vimrc<cr>
 
 " ## Buffer Stuff, (close, next, prev)
 "   - Mimics command+w
-map <leader>W :Bclose<cr>
-map <leader>n :bn<cr>
+noremap <leader>W :Bclose<cr>
+noremap <leader>n :bn<cr>
 "  - p makes more sense, n is convinient when going back and forth
-map <leader>p :bp<cr>
-map <leader>n :bp<cr>
+noremap <leader>p :bp<cr>
+noremap <leader>n :bp<cr>
 
 " show name of current file
 map <leader>@ :echo @%<cr>
@@ -163,10 +172,10 @@ map <leader>@ :echo @%<cr>
 " => Spell checking
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Pressing ,ss will toggle and untoggle spell checking
-map <leader>ss :setlocal spell!<cr>
+noremap <leader>ss :setlocal spell!<cr>
 
 " NERDTree
-map <C-n> :NERDTreeToggle<CR>
+noremap <C-n> :NERDTreeToggle<CR>
 let NERDTreeHighlightCursorline=1
 let NERDTreeIgnore = ['tmp', '.yardoc', 'pkg']
 let NERDTreeShowHidden=1
