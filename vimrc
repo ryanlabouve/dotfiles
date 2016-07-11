@@ -207,6 +207,7 @@ let g:jsx_ext_required = 0 " Allow JSX in normal JS files
 " Purge cache every control p time
 " nnoremap <silent> <c-p> :ClearCtrlPCache<cr>\|:CtrlP<cr>
 nnoremap <Leader> 5 :ClearCtrlPCache<cr>\|:CtrlP<cr>
+nnoremap <C-P> :CtrlPBuffer<cr>
 
 " Get dat airline bar going
 let g:airline#extensions#tabline#enabled = 1
