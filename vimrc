@@ -40,7 +40,6 @@ set nobackup
 set nowritebackup
 set noswapfile    " http://robots.thoughtbot.com/post/18739402579/global-gitignore#comment-458413287
 " http://stackoverflow.com/questions/1675688/make-vim-show-all-white-spaces-as-a-character
-set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
 set list
 set tabstop=2
 set shiftwidth=2
@@ -60,6 +59,8 @@ set showmatch           " highlight matching [{()}]
 
 set autoread
 
+set showbreak=↪
+:set listchars=eol:·,tab:>-,trail:~,extends:>,precedes:<
 
 " My leader is `,` This is quite important
 let mapleader=","
@@ -206,8 +207,8 @@ let g:jsx_ext_required = 0 " Allow JSX in normal JS files
 
 " Purge cache every control p time
 " nnoremap <silent> <c-p> :ClearCtrlPCache<cr>\|:CtrlP<cr>
-nnoremap <Leader> 5 :ClearCtrlPCache<cr>\|:CtrlP<cr>
-nnoremap <C-P> :CtrlPBuffer<cr>
+" nnoremap <Leader> 5 :ClearCtrlPCache<cr>\|:CtrlP<cr>
+" nnoremap <C-π> :CtrlPBuffer<cr>
 
 " Get dat airline bar going
 let g:airline#extensions#tabline#enabled = 1
