@@ -54,7 +54,6 @@ set smartindent   " does the right thing (mostly) in
 set number              " show line numbers
 set relativenumber
 set showcmd             " show command in bottom bar
-set cursorline          " highlight current line
 set showmatch           " highlight matching [{()}]
 
 set autoread
@@ -94,6 +93,15 @@ function! NextClosedFold(dir)
     endif
 endfunction
 
+function! CopyRange() range
+    let n = @n
+    silent! normal gv"ny
+    call system("pbcopy", @n)
+    let @n = n
+endfunction
+
+vnoremap <C-c> :call CopyRange()<CR>
+
 " ~*~*~*~*~*  Vundle Stuff ~*~*~*~*~
 "
 " set the runtime path to include Vundle and initialize
@@ -109,9 +117,9 @@ Plugin 'gmarik/Vundle.vim'
 " Keep Plugin commands between vundle#begin/end.
 "
 " Colors
-Plugin 'chriskempson/base16-vim'
-let base16colorspace=256  " Access colors present in 256 colorspace
-colorscheme base16-default
+" Plugin 'chriskempson/base16-vim'
+" let base16colorspace=256  " Access colors present in 256 colorspace
+" colorscheme base16-default
 " autocmd ColorScheme * highlight NonText guifg=#bada55
 " autocmd ColorScheme * highlight SpecialKey guifg=#bada44
 set background=dark
@@ -168,6 +176,11 @@ noremap <leader>n :bp<cr>
 
 " show name of current file
 map <leader>@ :echo @%<cr>
+
+set cursorline
+hi CursorLine term=bold cterm=bold
+
+hi Search guibg=#000000 guifg=#000000
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Spell checking
