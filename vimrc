@@ -13,6 +13,7 @@
 filetype off                  " required
 syntax enable                 " enable syntax processing
 
+inoremap jk <Esc>
 set numberwidth=5
 
 set nocompatible              " be iMproved, required
