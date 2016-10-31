@@ -15,6 +15,7 @@ syntax enable                 " enable syntax processing
 
 inoremap jk <Esc>
 set numberwidth=5
+set clipboard=unnamed
 
 set nocompatible              " be iMproved, required
 set expandtab       " tabs are spaces
