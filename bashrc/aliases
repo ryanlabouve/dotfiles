@@ -40,3 +40,7 @@ alias be='bundle exec '
 alias rs='bundle exec rails s '
 
 alias railsf='ber db:drop && ber db:create && ber db:structure:load && ber:db:seed'
+
+alias v="nvim"
+alias vi="nvim"
+alias vim="nvim"

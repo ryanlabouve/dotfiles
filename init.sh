@@ -1,10 +1,10 @@
 #!/bin/bash
 
-echo "Updating all the things"
-./update.sh
+# echo "Updating all the things"
+# ./update.sh
 
-echo "Setting OSX Defaults"
-./osx.sh
+# echo "Setting OSX Defaults"
+# ./osx.sh
 
 # Create vim-tmp for swap files
 mkdir -p ~/.vim-tmp
@@ -17,6 +17,10 @@ ln -nfs $REPO_DIR/bash_profile ~/.bash_profile
 
 echo "Setting up symlinks for: vimrc"
 ln -nfs $REPO_DIR/vimrc ~/.vimrc
+
+echo "Setting up symlink for nvim"
+mkdir -p ~/.config/nvim
+ln -nfs $REPO_DIR/neovimrc ~/.config/nvim/init.vim
 
 echo "Setting up symlinks for: ackrc"
 ln -nfs $REPO_DIR/ackrc ~/.ackrc
@@ -33,6 +37,8 @@ cp vim/colors/* ~/.vim/colors/
 # Hack to get colors working right
 git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell
 vim +PluginInstall +qall
+nvim +PlugInstall +qall
+nvim +PlugUpgrade +qall
 cp ~/.vim/bundle/base-16/colors/*.vim ~/.vim/colors/
 
 # Git Stuff

@@ -1,6 +1,11 @@
 export JAVA_HOME=$(/usr/libexec/java_home)
 export ANDROID_HOME=/usr/local/Cellar/android-sdk/24.1.2
-export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.4/bin
+# export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.5/bin
+export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin
+export PATH="$HOME/.yarn/bin:$PATH"
+
+export GOROOT="$HOME/.go/current"
+export GOPATH="$HOME/code/go"
+export PATH="$GOPATH/bin:$GOROOT/bin:$PATH"
 
 export PATH=$PATH:~/gocode/bin
-export GOPATH=~/gocode
