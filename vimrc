@@ -308,3 +308,6 @@ augroup END
 
 let g:go_fmt_command = "goimports"
 au FileType go set nolist textwidth=0
+
+" TODO: https://github.com/w0rp/ale
+" TODO: https://github.com/wesQ3/vim-windowswap

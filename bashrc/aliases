@@ -44,3 +44,5 @@ alias railsf='ber db:drop && ber db:create && ber db:structure:load && ber:db:se
 alias v="nvim"
 alias vi="nvim"
 alias vim="nvim"
+
+alias gop="cd ~/code/go/src/github.com"

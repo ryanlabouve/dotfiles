@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # echo "Updating all the things"
-# ./update.sh
+./update.sh
 
 # echo "Setting OSX Defaults"
-# ./osx.sh
+./osx.sh
 
 # Create vim-tmp for swap files
 mkdir -p ~/.vim-tmp
@@ -39,6 +39,9 @@ git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shel
 vim +PluginInstall +qall
 nvim +PlugInstall +qall
 nvim +PlugUpgrade +qall
+nvim +GoInstallBinaries +qall
+nvim +GoUpdateBinaries +qall
+
 cp ~/.vim/bundle/base-16/colors/*.vim ~/.vim/colors/
 
 # Git Stuff

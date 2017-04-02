@@ -88,6 +88,7 @@ endfunction
 "
 call plug#begin('~/.local/share/nvim/plugged')
 
+" ::GoInstallBinaries and :GoUpdateBinaries
 Plug 'fatih/vim-go'
 
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
@@ -99,16 +100,25 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-surround'
 Plug 'pangloss/vim-javascript'
+Plug 'tpope/vim-rails'
 
 Plug 'tomtom/tcomment_vim' " gcc to comment out code
 Plug 'rking/ag.vim'
 Plug 'editorconfig/editorconfig-vim'        " respect projects rules
 Plug 'mxw/vim-jsx'
 " Plug 'bling/vim-airline'
-" Plug 'chrismccord/bclose.vim'               " For closing buffers
+Plug 'chrismccord/bclose.vim'               " For closing buffers
 
 " Plug 'tmux-plugins/vim-tmux-focus-events'
 " Plug 'wesQ3/vim-windowswap'
+Plug 'mustache/vim-mustache-handlebars'
+
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'zchee/deoplete-go', { 'do': 'make'}
+Plug 'nsf/gocode', { 'rtp': 'nvim', 'do': '~/.config/nvim/plugged/gocode/nvim/symlink.sh' }
+
+Plug 'majutsushi/tagbar'
+
 call plug#end()
 
 " A quicker way to reload vimrc
@@ -208,3 +218,21 @@ set sidescroll=1
 
 let g:go_fmt_command = "goimports"
 au FileType go set nolist textwidth=0
+
+
+" Ember Stuff
+" `{{` tab should autocomplete
+" (https://github.com/mustache/vim-mustache-handlebars)
+let g:mustache_abbreviations = 1
+"" [[ and ]] jump around to tags
+
+let g:deoplete#enable_at_startup = 1
+filetype plugin on
+
+" neocomplete like
+set completeopt+=noinsert
+" deoplete.nvim recommend
+set completeopt+=noselect
+let g:deoplete#sources#go#gocode_binary = $GOPATH.'/bin/gocode'
+let g:deoplete#sources#go#use_cache = 1
+nmap <leader>t :TagbarToggle<CR>
