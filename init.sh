@@ -35,14 +35,14 @@ cp vim/colors/* ~/.vim/colors/
 # ln -fs $REPO_DIR/vim ~/.vim
 
 # Hack to get colors working right
-git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell
-vim +PluginInstall +qall
+# git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell
+# vim +PluginInstall +qall
 nvim +PlugInstall +qall
 nvim +PlugUpgrade +qall
 nvim +GoInstallBinaries +qall
 nvim +GoUpdateBinaries +qall
 
-cp ~/.vim/bundle/base-16/colors/*.vim ~/.vim/colors/
+# cp ~/.vim/bundle/base-16/colors/*.vim ~/.vim/colors/
 
 # Git Stuff
 # http://news.ycombinator.com/item?id=4130494
