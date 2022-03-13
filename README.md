@@ -1,17 +1,12 @@
 # ryanlabouve/dotfiles
 
 Current Environment
-* VIM
+* VSCode
+* VIM (deprecated for main workflow, for use on servers)
 * Ack
 * Bash
-* TMUX
 
-// TODO: 
-Step 2: Things to explore
-* ZSH
-* oh my zsh (https://github.com/robbyrussell/oh-my-zsh)
-
-## Bootstrapping
+## Bootstrapping New Desktop
 
 `./init.sh`
 
@@ -19,6 +14,38 @@ Step 2: Things to explore
 
 // TODO: There will be a lot here added over time. Nowhere near complete
 currently.
+
+### VSCode
+
+VIM extension https://github.com/VSCodeVim/Vim
+
+```js
+{
+    ...
+    "vim.useSystemClipboard": true,
+}
+```
+
+#### On every project
+
+```js
+{
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
+}
+```
+
+https://marketplace.visualstudio.com/items?itemName=Prisma.prisma
+
+### direnv
+
+https://direnv.net/
 
 ### Homebrew
 
@@ -54,9 +81,7 @@ https://github.com/creationix/nvm
 ## References
 
 https://github.com/mathiasbynens/dotfiles
-
 https://github.com/thoughtbot/dotfiles
-
 https://github.com/webpro/awesome-dotfiles
 
 ## Colors
