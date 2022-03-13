@@ -28,6 +28,8 @@ VIM extension https://github.com/VSCodeVim/Vim
 
 #### On every project
 
+`.vscode/settings.json`
+
 ```js
 {
   "editor.formatOnSave": true,
