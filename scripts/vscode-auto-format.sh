@@ -1,3 +1,6 @@
+# 
+# /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/ryanlabouve/dotfiles/master/scripts/vscode-auto-format.sh)"
+# 
 if [ ! -d ./.git ]; then
     echo "Not a git repo";
     return 0;
